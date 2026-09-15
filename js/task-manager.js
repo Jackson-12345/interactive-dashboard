@@ -7,3 +7,13 @@ function weeklyGoal(userName, dailyGoal, bonusTasks) {
 
     document.getElementById("goal-message").innerHTML = output;
 }
+// click
+document.getElementById("goal-btn").addEventListener("click", function(event) {
+    event.preventDefault();
+
+    let userName = document.getElementById("user-name").value;
+    let dailyGoal = Number(document.getElementById("daily-goal").value);
+    let bonusTasks = Number(document.getElementById("bonus-tasks").value);
+
+    weeklyGoal(userName, dailyGoal, bonusTasks);
+});
