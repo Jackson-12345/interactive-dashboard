@@ -1,3 +1,8 @@
+place your index.html with this
+
+I kept your existing code and added the converter inside the same row.
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +11,6 @@
     <title>My Interactive Dashboard</title>
 
     <link rel="stylesheet" href="css/style.css">
-   
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -18,31 +22,60 @@
 
     <p>This dashboard was created by Jackson Antoine for the WEB-115 course at Wake Tech</p>
 
-
-    <!-- The <noscript> is for web browsers with JavaScript rendering disabled. -->
     <noscript>Unfortunately, your web browser does not support JavaScript.</noscript>
 
-<div class="container">
-    <div class="row">
-        <div class="col" id="weekly-tasks">
-            <form id="goal-form">
-                <label for="user-name">Name:</label>
-                <input type="text" id="user-name">
+    <div class="container">
+        <div class="row">
 
-                <label for="daily-goal">Daily Task Goal:</label>
-                <input type="number" id="daily-goal">
+            <!-- Weekly Tasks -->
+            <div class="col" id="weekly-tasks">
+                <form id="goal-form">
+                    <label for="user-name">Name:</label>
+                    <input type="text" id="user-name">
 
-                <label for="bonus-tasks">Weekly Bonus Tasks:</label>
-                <input type="number" id="bonus-tasks">
+                    <label for="daily-goal">Daily Task Goal:</label>
+                    <input type="number" id="daily-goal">
 
-                <button type="submit" id="goal-btn">Calculate Goal</button>
-            </form>
+                    <label for="bonus-tasks">Weekly Bonus Tasks:</label>
+                    <input type="number" id="bonus-tasks">
 
-            <p id="goal-message"></p>
+                    <button type="submit" id="goal-btn">Calculate Goal</button>
+                </form>
 
-            <script src="js/task-manager.js"></script>
+                <p id="goal-message"></p>
+
+                <script src="js/task-manager.js"></script>
+            </div>
+
+            <!-- Metric Converter -->
+            <div class="col" id="metric-converter">
+                <h2>Imperial/Metric Converter</h2>
+
+                <form id="converter-form">
+                    <label for="conversion-value">Enter a value:</label>
+                    <input type="number" id="conversion-value" step="any" required>
+
+                    <label for="conversion-type">Select conversion:</label>
+                    <select id="conversion-type">
+                        <option value="1">Inches to Centimeters</option>
+                        <option value="2">Feet to Centimeters</option>
+                        <option value="3">Yards to Meters</option>
+                        <option value="4">Miles to Kilometers</option>
+                        <option value="5">Centimeters to Inches</option>
+                        <option value="6">Centimeters to Feet</option>
+                        <option value="7">Meters to Yards</option>
+                        <option value="8">Kilometers to Miles</option>
+                    </select>
+
+                    <button type="submit" id="convert-button">Convert</button>
+                </form>
+
+                <p id="conversion-result">Result will appear here.</p>
+
+                <script src="js/metric-converter.js" defer></script>
+            </div>
+
         </div>
     </div>
-</div>
 </body>
 </html>
