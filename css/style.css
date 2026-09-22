@@ -27,3 +27,34 @@ h1 {
     margin-top: 20px;
     font-weight: bold;
 }
+
+#weekly-tasks,
+#metric-converter {
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#converter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+}
+
+#converter-form input,
+#converter-form select,
+#converter-form button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#convert-button {
+    cursor: pointer;
+}
+
+#conversion-result {
+    margin-top: 20px;
+    font-weight: bold;
+}
