@@ -3,6 +3,7 @@ place your index.html with this
 I kept your existing code and added the converter inside the same row.
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,6 +44,18 @@ I kept your existing code and added the converter inside the same row.
                 </form>
 
                 <p id="goal-message"></p>
+
+                <!-- Task Manager -->
+                <div id="task-list">
+                    <h3>Weekly Task List</h3>
+                    <p>Enter a task below to manage your goals.</p>
+
+                    <form id="task-form">
+                        <label for="task-name">Enter task:</label>
+                        <input type="text" id="task-name">
+                        <button type="submit" id="add-task">Add Task</button>
+                    </form>
+                </div>
 
                 <script src="js/task-manager.js"></script>
             </div>
